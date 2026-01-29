@@ -96,9 +96,10 @@ a:hover{ text-decoration:underline; }
 }
 .hero__grid{
   display:grid;
-  grid-template-columns: 1.35fr .65fr;
+  grid-template-columns: 240px 1fr 0.75fr;
   gap:24px;
   align-items:start;
+}
 }
 .badge{
   display:inline-block;
@@ -332,13 +333,27 @@ textarea{ resize: vertical; }
 /* Responsive */
 @media (max-width: 920px){
   .hero__grid{ grid-template-columns: 1fr; }
-  .grid2{ grid-template-columns: 1fr; }
-  .caseGrid{ grid-template-columns: 1fr; }
-  .contactRow{ grid-template-columns: 1fr; }
+  .hero__photo{ justify-content:flex-start; }
+}
 }
 
 @media (max-width: 760px){
   .nav{ display:none; }
   .menuBtn{ display:block; }
   .mobileNav{ display:block; }
+}
+
+.hero__photo{
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+}
+
+.hero__photo img{
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 999px;
+  border: 3px solid rgba(255,255,255,.15);
+  box-shadow: 0 20px 40px rgba(0,0,0,.45);
 }
